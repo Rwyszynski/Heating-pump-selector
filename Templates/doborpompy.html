@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <html>
+    <head>
+        <title>Dobór pompy</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <h1>Odpowiedz na pytania by dobrać swoją pompę:</h1>
+    <form id="formularz_doboru" action="{{url_for('doborpompy')}}" method="POST">
+    <label for="metry">Podaj ile m2 ma Twój dom</label>
+    <input type="text" id="metry" name="metry" value="m2"><br>
+    <label for="metry_ogrzewane">Podaj ilość m2 ogrzewanych</label>
+    <input type="text" id="metry_ogrzewane" name="metry_ogrzewane" value="m2"><br>
+    <label for="ilosc_osob">Podaj ile osób mieszka w domu</label>
+    <input type="text" id="ilosc_osob" name="ilosc_osob" value="1-20"><br>
+      <label for="typ_domu">Wybierz typ swojego domu:</label>
+      <select id="typ_domu" name="typ_domu">
+        <option value="niezaizolowany">Niezaizolowany</option>
+        <option value="pasywny">Pasywny</option>
+        <option value="energooszczędny">Energooszczędny</option>
+        <option value="zaizolowany">Zaizolowany</option>
+      </select><br>
+      <input type="checkbox" id="dofinansowanie" name="dofinansowanie" value="dofinansowanie">
+      <label for="dofinansowanie">Będe starał się o dofinansowanie</label><br>
+      <label for="budget">Jaki chcesz rodzaj pompy:</label>
+      <select id="budget" name="budget">
+        <option value="budget">Budget</option>
+        <option value="standard">Standard</option>
+        <option value="premium">Premium</option>
+      </select><br>
+      <label for="zrodlo">Jakie jest żródło ogrzewania domu:</label>
+      <select id="zrodlo" name="zrodlo">
+        <option value="grzejniki">Grzejniki</option>
+        <option value="ogrzewanie_podlogowe">Ogrzewanie podłogowe</option>
+      </select><br>
+      <label for="powietrze_woda">Czy pompa ma być wpowietrzna czy wodna:</label>
+      <select id="powietrze_woda" name="powietrze_woda">
+        <option value="powietrze">Powietrze</option>
+        <option value="woda">Woda</option>
+        <option value="nie_wiem">Nie wiem</option>
+      </select><br>
+
+    <input type="submit" value="Send">
+
+    </form>
+</body>
+
+</html>
