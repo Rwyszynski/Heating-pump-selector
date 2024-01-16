@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Dobor pompy wynik</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends "baza.html" %}
 
-    </head>
-    <body>
-        <h1>Dobrałeś pompę na {{ metry }} m2</h1>
-    </body>
-</html>
+{% block body_nag %}
+Dobrałeś pompę do domu {{ metry }}m2 o mocy {{moc_pompy}} kW<br><br>
+    {% if czy_woda == "woda" or zrodlo == 'grzejniki'%}
+        {% block content %}
+            Zalecane użycie pompy wodnej, lub lepiej zaizolować budynek.
+        {% endblock %}
+    {% endif %}
+{% endblock %}

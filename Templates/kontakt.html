@@ -1,0 +1,70 @@
+
+{% extends "baza.html" %}
+
+{% block body_nag %}
+<h1>Tutaj znajdziesz FAQ i informacje o kontakcie</h1>
+{% endblock%}
+
+
+{% block body_zaw %}
+
+<div class="container">
+
+  <div class="row">
+    <div class="col">
+      
+    </div>
+    <div class="col-8" style="text-align: center;">
+      <div class="accordion FAQ" id="accordionFlushExample">
+        <div class="accordion-FAQ1">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Jak działa pompa Ciepła?
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Pompy ciepła działają dzięki wytwarzaniu obiegu ciepła pomiędzy obszarami, w których panują różne temperatury. Pobierają one ciepło z powietrza lub gruntu i przenoszą je do domowej instalacji grzewczej – na przykład grzejników lub systemu ogrzewania w podłodze</div>
+          </div>
+        </div>
+        <div class="accordion-FAQ2">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Od czego zależy rodzaj pompy?
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Zapotrzebowanie cieplne budynku należy oszacować uwzględniając przede 
+                wszystkim technologię, w której zbudowano dom, wiek budynku, liczbę i 
+                wielkości przeszkleń oraz rodzaj wentylacji. Najmniejsze zapotrzebowanie na 
+                moc grzewczą mają nowoczesne pasywne domy, a największe nieocieplone budynki, 
+                zbudowane w starej technologii.</div>
+          </div>
+        </div>
+        <div class="accordion-FAQ3">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Lepsza większa czy mniejsza?
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Jest to informacja, ile energii elektrycznej zostało pobrane z sieci w stosunku do ilości energii cieplnej przekazanej do instalacji grzewczej. W dużym skrócie – im wyższy COP, tym lepiej. Wysoki COP oznacza, że pompa wytwarza większą ilość ciepła, zużywając mniej energii.</div>
+          </div>
+        </div>
+      </div>
+    
+    <br>
+     
+    </div>
+    <div class="col">
+      
+    </div>
+  </div>
+</div>
+<h1>Z tych marek korzystamy
+</h1>
+<div>
+<img src="{{ url_for('static', filename='Buderus.png') }}">
+<img src="{{ url_for('static', filename='DeDietrich.png') }}">
+<img src="{{ url_for('static', filename='Rotenso.png') }}">
+</div> 
+{% endblock %}
