@@ -4,7 +4,21 @@
 Dobrałeś pompę do domu {{ metry }}m2 o mocy {{moc_pompy}} kW<br><br>
     {% if czy_woda == "woda" or zrodlo == 'grzejniki'%}
         {% block content %}
-            Zalecane użycie pompy wodnej, lub lepiej zaizolować budynek.
+            Zalecane użycie pompy wodnej, lub lepiej zaizolować budynek.<br><br>
         {% endblock %}
     {% endif %}
+
+
+<h1>Pompy które możesz zastosować w swoim domu:</h1>  
+ 
+{% for transaction in transactions %}
+{% if transaction.moc > moc_pompy and transaction.moc < (moc_pompy*1.5) %} 
+<h3>
+-{{transaction.marka}}
+{{transaction.typ}}
+{{transaction.moc}}kW</h3><br>
+{% endif %}
+{% endfor %}
+
+
 {% endblock %}

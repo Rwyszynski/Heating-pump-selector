@@ -5,13 +5,12 @@ Odpowiedz na pytania by dobrać swoją pompę:
 {% endblock%}
 
 {% block body_zaw %}
-   
     <form class="row g-3" id="formularz_doboru" action="{{url_for('doborpompy')}}" method="POST">
-      <div class="col-md-6">
+      <div class="col-md-12">
         <label for="metry" class="form-label">Podaj ile m2 ma Twój dom</label>
         <input type="etext" class="form-control" id="metry" name="metry" placeholder="250">
       </div>
-      <div class="col-md-6">
+      <div class="col-md-12">
         <label for="metry_ogrzewane" class="form-label">Podaj ilość m2 ogrzewanych</label>
         <input type="text" class="form-control" id="metry_ogrzewane" name="metry_ogrzewane" placeholder="200">
       </div>
@@ -21,6 +20,7 @@ Odpowiedz na pytania by dobrać swoją pompę:
       </div>
       <div class="col-auto">
         <label class="visually-hidden" for="typ_domu">Wybierz typ swojego domu:</label>
+        <label for="typ_domu" class="form-label">Podaj stan izolacji budynku</label>
         <select class="form-select" id="typ_domu" name="typ_domu">
           <option selected>Wybierz</option>
           <option value="niezaizolowany">Niezaizolowany</option>
@@ -38,16 +38,17 @@ Odpowiedz na pytania by dobrać swoją pompę:
         </div>
       </div>
       <div class="col-auto">
-        <label class="visually-hidden" for="budget">Jaki chcesz rodzaj pompy:<</label>
+        <label class="visually-hidden" for="budget">Jaki chcesz rodzaj pompy:</label>
+        <label for="budget" class="form-label">Wybierz jaki masz budget</label>
         <select class="form-select" id="budget" name="budget">
-          <option selected>Wybierz</option>
+          <option selected>Wybierz budget</option>
           <option value="budget">Budget</option>
           <option value="standard">Standard</option>
           <option value="premium">Premium</option>
         </select>
       </div>
       <div class="col-md-4">
-        <label for="zrodlo" class="form-label">Jakie jest żródło ogrzewania domu:</label>
+        <label for="zrodlo" class="form-label">Jakie jest żródło główne ogrzewania domu:</label>
         <select id="zrodlo" class="form-select" name="zrodlo">
           <option selected>Wybierz</option>
           <option value="grzejniki">Grzejniki</option>
